@@ -121,7 +121,7 @@ func (s peopleService) SavePeople(response http.ResponseWriter, request *http.Re
 	}
 
 	response.WriteHeader(http.StatusCreated)
-	response.Write([]byte(`{"error": "Success save new data"}`))
+	response.Write([]byte(`{"message": "Success save new data"}`))
 }
 
 func (s peopleService) UpdatePeople(response http.ResponseWriter, request *http.Request) {
@@ -164,7 +164,7 @@ func (s peopleService) UpdatePeople(response http.ResponseWriter, request *http.
 	}
 
 	response.WriteHeader(http.StatusOK)
-	response.Write([]byte(`{"error": "Success update data"}`))
+	response.Write([]byte(`{"message": "Success update data"}`))
 }
 
 func (s peopleService) DeletePeople(response http.ResponseWriter, request *http.Request) {
@@ -197,5 +197,5 @@ func (s peopleService) DeletePeople(response http.ResponseWriter, request *http.
 	}
 
 	response.WriteHeader(http.StatusOK)
-	response.Write([]byte(`{"error": "Success delete data"}`))
+	response.Write([]byte(`{"message": "Success delete data"}`))
 }
